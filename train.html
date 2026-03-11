@@ -1,0 +1,173 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Train Tickets</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f6f9;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.menu a:hover{
+color:#ff9900;
+}
+
+/* PAGE TITLE */
+
+.title{
+text-align:center;
+margin:40px 0;
+font-size:28px;
+}
+
+/* TRAIN CARDS */
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.train-info{
+line-height:1.6;
+}
+
+.price{
+font-size:18px;
+font-weight:bold;
+color:#333;
+}
+
+button{
+background:#ff9900;
+border:none;
+padding:10px 18px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e68900;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo">🌍 TravelGo</div>
+
+<div class="menu">
+<a href="home.html">Home</a>
+<a href="#">My Trips</a>
+<a href="#">Support</a>
+</div>
+</div>
+
+<h2 class="title">🚆 Available Trains</h2>
+
+<div class="container">
+
+<div class="card">
+
+<div class="train-info">
+<h3>Express 123</h3>
+<p>Departure: 08:30 AM</p>
+<p>Seats Available: 45</p>
+</div>
+
+<div>
+<p class="price">₹650</p>
+<button onclick="book()">Book Ticket</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="train-info">
+<h3>Superfast 456</h3>
+<p>Departure: 02:00 PM</p>
+<p>Seats Available: 30</p>
+</div>
+
+<div>
+<p class="price">₹720</p>
+<button onclick="book()">Book Ticket</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="train-info">
+<h3>Night Rider 789</h3>
+<p>Departure: 09:15 PM</p>
+<p>Seats Available: 60</p>
+</div>
+
+<div>
+<p class="price">₹540</p>
+<button onclick="book()">Book Ticket</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function book(){
+alert("Ticket booked successfully!");
+window.location.href="payment.html";
+}
+
+</script>
+
+</body>
+</html>
+```

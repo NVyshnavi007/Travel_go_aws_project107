@@ -1,0 +1,226 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TravelGo Booking</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:16px;
+}
+
+.menu a:hover{
+color:#ff9900;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:300px;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:40px;
+font-weight:bold;
+}
+
+/* BOOKING SECTION */
+
+.container{
+display:flex;
+justify-content:center;
+margin-top:-80px;
+}
+
+.card{
+background:white;
+padding:35px;
+width:420px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+label{
+font-weight:bold;
+display:block;
+margin-top:10px;
+}
+
+select,input{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+background:#ff9900;
+border:none;
+padding:14px;
+color:white;
+width:100%;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#e68900;
+transform:scale(1.03);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+<div class="logo">🌍 TravelGo</div>
+
+<div class="menu">
+<a href="home.html">Home</a>
+<a href="#">My Trips</a>
+<a href="#">Support</a>
+<a href="login.html">Login</a>
+</div>
+</div>
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+Plan Your Journey ✈
+</div>
+
+<!-- BOOKING SECTION -->
+
+<div class="container">
+
+<div class="card">
+
+<h2>Book Your Trip</h2>
+
+<label>Destination</label>
+
+<select id="destination">
+<option value="">Select Destination</option>
+<option>Hyderabad</option>
+<option>Delhi</option>
+<option>Bangalore</option>
+<option>Mumbai</option>
+</select>
+
+<label>Travel Date</label>
+
+<input type="date" id="date">
+
+<label>Transport</label>
+
+<select id="transport">
+<option value="">Select Transport</option>
+<option value="train">🚆 Train</option>
+<option value="flight">✈ Flight</option>
+<option value="bus">🚌 Bus</option>
+</select>
+
+<button onclick="goNext()">Search Tickets</button>
+
+</div>
+
+</div>
+
+<script>
+
+// get today's date
+let today = new Date().toISOString().split("T")[0];
+
+document.getElementById("date").setAttribute("min", today);
+document.getElementById("date").value = today;
+
+function goNext(){
+
+let destination = document.getElementById("destination").value;
+let date = document.getElementById("date").value;
+let transport = document.getElementById("transport").value;
+
+if(destination==""){
+alert("Please select destination");
+return;
+}
+
+if(date==""){
+alert("Select travel date");
+return;
+}
+
+if(date < today){
+alert("You cannot book tickets for past dates");
+return;
+}
+
+if(transport==""){
+alert("Select transport");
+return;
+}
+
+if(transport=="train"){
+window.location.href="train.html";
+}
+
+if(transport=="flight"){
+window.location.href="flight.html";
+}
+
+if(transport=="bus"){
+window.location.href="bus.html";
+}
+
+}
+
+</script>
+
+</body>
+</html>
+```

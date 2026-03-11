@@ -1,0 +1,109 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flight Tickets</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+}
+
+.navbar{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.title{
+text-align:center;
+margin:40px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+display:flex;
+justify-content:space-between;
+}
+
+button{
+background:#ff9900;
+border:none;
+padding:10px 18px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<div>🌍 TravelGo</div>
+<div class="menu">
+<a href="home.html">Home</a>
+</div>
+</div>
+
+<h2 class="title">✈ Available Flights</h2>
+
+<div class="container">
+
+<div class="card">
+<div>
+<h3>Air India 204</h3>
+<p>Departure: 07:30 AM</p>
+<p>Seats Available: 25</p>
+</div>
+<div>
+<p><b>₹4200</b></p>
+<button onclick="book()">Book Ticket</button>
+</div>
+</div>
+
+<div class="card">
+<div>
+<h3>Indigo 6E 456</h3>
+<p>Departure: 01:10 PM</p>
+<p>Seats Available: 40</p>
+</div>
+<div>
+<p><b>₹3800</b></p>
+<button onclick="book()">Book Ticket</button>
+</div>
+</div>
+
+</div>
+
+<script>
+function book(){
+window.location.href="payment.html";
+}
+</script>
+
+</body>
+</html>
+```

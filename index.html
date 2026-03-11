@@ -1,0 +1,102 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TravelGo Login</title>
+
+<style>
+body{
+font-family:Arial;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1504198453319-5ce911bafcde");
+
+background-size:cover;
+background-position:center;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:8px;
+width:320px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#ff9900;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+#msg{
+color:red;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>TravelGo Login</h2>
+
+<input id="email" placeholder="Enter Email">
+
+<input id="phone" placeholder="Enter Phone Number">
+
+<button onclick="login()">Continue</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+
+let emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+let phonePattern=/^[0-9]{10}$/;
+
+if(!email.match(emailPattern)){
+document.getElementById("msg").innerHTML="Enter valid email";
+return;
+}
+
+if(!phone.match(phonePattern)){
+document.getElementById("msg").innerHTML="Enter valid 10 digit phone number";
+return;
+}
+
+localStorage.setItem("userEmail",email);
+localStorage.setItem("userPhone",phone);
+
+window.location.href="home.html";
+
+}
+
+</script>
+
+</body>
+</html>
+```
