@@ -4,10 +4,12 @@ bus
 flight
 bookings ,pages along with the payment page.
 this project is developed using html,css,js.i.e.,this is only a frontend project,
-This project is deployed using aws s3.
+This project is deployed using aws s3,EC2.
 Live link:
 [http://my-student-aws-project-travelgo.s3-website.eu-north-1.amazonaws.com]
 Demo Link:
 [https://drive.google.com/file/d/1Tk63M-GOYJGQLWtNHF2YpQOnqllGV6L_/view?usp=drive_link]
 Source code:
 [https://github.com/NVyshnavi007/Travel_go_aws_project107]
+Access link:
+[http://13.60.216.38]
